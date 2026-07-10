@@ -20,7 +20,7 @@ def retrieve(query: str, user_id: str) -> str:
         namespace=user_id
     )
 
-    results = vectorstore.as_retriever.invoke(query, k=4)
+    results = vectorstore.as_retriever().invoke(query, k=4)
 
     return "\n\n".join([chunk.page_content for chunk in results])
 

@@ -36,7 +36,7 @@ def classify_email(state: EmailState) -> EmailState:
     """
 
     response = llm.invoke([HumanMessage(content=prompt)])
-    return {**state, "category": response.content().lower()}
+    return {**state, "category": response.content.strip().lower()}
 
 def should_lookup(state: EmailState) -> Literal["rag_lookup", "escalate"]:
     if state["category"] == "syllabus_question":
