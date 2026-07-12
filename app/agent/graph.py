@@ -38,9 +38,11 @@ def classify_email(state: EmailState) -> EmailState:
     response = llm.invoke([HumanMessage(content=prompt)])
     return {**state, "category": response.content.strip().lower()}
 
-def should_lookup(state: EmailState) -> Literal["rag_lookup", "escalate"]:
+def should_lookup(state: EmailState) -> Literal["rag_lookup", "escalate", "__end__"]:
     if state["category"] == "syllabus_question":
         return "rag_lookup"
+    if state["category"] == "spam":
+        return "__end__"
     return "escalate"
 
 def rag_lookup(state: EmailState) -> EmailState:
@@ -61,7 +63,7 @@ def make_decision(state: EmailState) -> EmailState:
 
     Can this email be answered correctly and completely with sufficient 
     information from the content retrieved from the syllabus. Respond with
-    ONLY "answerable" OR "escalate"
+    ONLY "answerable" OR "escalate".
     """
 
     response = llm.invoke([HumanMessage(content=prompt)])
@@ -88,7 +90,9 @@ def draft_reply(state: EmailState) -> EmailState:
     Relevant syllabus content:
     {state['retrieved_context']}
 
-    Write only the body of the email.
+    Write only the body of the email. Do NOT use bracets/parentheses as 
+    placeholders for any information you do NOT have. Keep the email 
+    concise but informative enough to fully answer the question.
     """
 
     response = llm.invoke([HumanMessage(content=prompt)])
