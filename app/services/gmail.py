@@ -28,7 +28,7 @@ def get_gmail_service():
 def get_unread_emails(service, professor_email: str):
     results = service.users().messages().list (
         userId="me",
-        q=f"is:unread to:{professor_email}"
+        q=f"is:unread to:{professor_email} from:@txstate.edu"
     ).execute()
 
     messages = results.get("messages", [])
@@ -42,6 +42,7 @@ def get_unread_emails(service, professor_email: str):
         ).execute()
 
         headers = {h["name"]: h["value"] for h in full["payload"]["headers"]}
+
         emails.append({
             "id": msg["id"],
             "subject": headers.get("Subject", ""),
@@ -68,7 +69,7 @@ def get_email_body(message: dict) -> str:
 def send_email(service, to: str, subject: str, body: str):
     message = MIMEText(body)
     message["to"] = to
-    message["subject"] = subject
+    message["Subject"] = subject
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode("utf-8")
     service.users().messages().send(
         userId="me",
