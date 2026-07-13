@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import RedirectResponse
 from jose import jwt
 from datetime import datetime, timedelta, timezone
-from app.database.database import get_professor_by_google_id, insert_and_update_professors
+from app.database.database import insert_and_update_professors
 
 router = APIRouter()
 

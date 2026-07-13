@@ -1,4 +1,3 @@
-import os 
 import base64
 from email.mime.text import MIMEText
 from google.oauth2.credentials import Credentials
