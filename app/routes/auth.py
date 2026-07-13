@@ -60,7 +60,7 @@ async def auth_google_callback(code: str):
             "https://www.googleapis.com/oauth2/v2/userinfo",
             headers={"Authorization": f"Bearer {access_token}"}
         )
-        profile = profile_response.json
+        profile = profile_response.json()
 
         google_id = profile["id"]
         email = profile["email"]

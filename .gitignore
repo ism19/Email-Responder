@@ -11,3 +11,4 @@ build/
 .langsmith/
 credentials.json
 token.json
+email_responder.db
