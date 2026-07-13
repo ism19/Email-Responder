@@ -3,8 +3,8 @@ from app.services.gmail import get_gmail_service, get_unread_emails, send_email,
 from app.agent.graph import agent
 import traceback
 
-async def poll_gmail(professor_email: str, user_id: str, poll_interval: int = 30):
-    service = get_gmail_service()
+async def poll_gmail(professor_email: str, user_id: str, token_data: dict, poll_interval: int = 30):
+    service = get_gmail_service(token_data)
 
     while True:
         try:
@@ -37,7 +37,7 @@ async def poll_gmail(professor_email: str, user_id: str, poll_interval: int = 30
                         service=service,
                         to=professor_email,
                         subject=f"[Auto-replied] {email.get('subject', '')}",
-                        body=f"Auto-replied to:\nFrom: {email.get('sender', '')}\nSubject: {email.get('subject', '')}\n\nReply:\n{result['draft_reply']}"
+                        body=f"Auto-replied to:\nFrom: {email.get('sender', '')}\nSubject: {email.get('subject', '')}\n\nReply:\n{result['draft_reply']}\n\nView original: https://mail.google.com/mail/u/0/#inbox/{email.get('id', '')}"
                     )
                 else:
                     send_email (
