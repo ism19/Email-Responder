@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+    - /Users/ismah/Desktop/email-responder/credentials.json:/app/credentials.json
+    - /Users/ismah/Desktop/email-responder/token.json:/app/token.json
