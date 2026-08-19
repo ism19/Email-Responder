@@ -4,9 +4,8 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
 class EmailCategory(str, Enum):
-    syllabus_question = "syllabus_question"
-    admin = "admin"
-    spam = "spam"
+    irrelevant = "irrelevant"
+    student = "student"
 
 class EmailClassification(BaseModel):
     category: EmailCategory = Field(description="Classification category")
@@ -19,16 +18,16 @@ structured_llm = llm.with_structured_output(EmailClassification)
 system = """
     You are an email assistant that classifies emails in a user's inbox.
     
-    Student emails can be classified into one of the following categories:
-        - syllabus_question: can be answered from course syllabus (policies,
-        deadlines, grading, course schedule)
-        - admin: assignment and project extensions, accomodations, scheduling,
-        grade disputes, extenuating circumstances
-        - spam: irrelevant or junk
+    Emails are of two categories:
+        - Student emails
+            • legitimate inquiries including academic questions, extension 
+            requests, scheduling, attendance etc — even if informal or brief
+        - Spam or irrelevant 
+            • any non-student emails that do not relate to a class
+            • advertisements
+            • organization emails
 
-    Always check if it's possibly a syllabus question first. Respond with
-    ONLY the category name from the options (syllabus_question, admin, spam).
-
+    Respond with 1 for student email and 0 for not irrelevant/spam.
 """
 
 prompt = ChatPromptTemplate.from_messages([
