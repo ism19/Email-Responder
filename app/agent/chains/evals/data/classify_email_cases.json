@@ -1,0 +1,223 @@
+[
+    {
+        "subject": "Midterm Group",
+        "body": [
+            "Hi Professor",
+            "John Appleseed and I wanted to form a group of two for the midterm.",
+            "Thank you,",
+            "Jane Doe",
+            "(studentID)"
+        ],
+        "expected_category": "student"
+    },
+    {
+        "subject": "Icy roads in Austin - Travel dangerous",
+        "body": [
+            "Hello Professor,",
+            "I'm a student in your class, and I'm not sure if I'll be able to make it to tomorrow's lecture if the roads are icy tomorrow because",
+            "It's a 30-minute drive from my house to TXST and I don't think it would be safe. I will try to make it, but in case I don't, could you excuse my attendance?",
+            "Thank you,",
+            "Jane Doe",
+            "(studentID)"
+        ],
+        "expected_category": "student"
+    },
+    {
+        "subject": "SI Session Link",
+        "body": [
+            "Hi, Professor! can I get the link for the Wednesday 6 pm zoom session please? I missed one session.",
+            "Thank you,",
+            "Jane Doe",
+            "(studentID)"
+        ],
+        "expected_category": "student"
+    },
+    {
+        "subject": "Extension for Week 11",
+        "body": [
+            "Hi professor,",
+            "Would you be able to give me an extension on the remediated resume assignment? I had 4 exams this week and I'm struggling to manage my",
+            "workload. Just one more day would help me a lot if it's possible.",
+            "Thank you,",
+            "Jane Doe",
+            "(studentID)"
+        ],
+        "expected_category": "student"
+    },
+    {
+        "subject": "Extension for discussion post",
+        "body": [
+            "Hi professor",
+            "Can I get an extension for this week's discussion post?",
+            "Thanks,",
+            "Jane Doe"
+        ],
+        "expected_category": "student"
+    },
+    {
+        "subject": "Pay CSM Tuition & Fees",
+        "body": [
+            "Hey John Appleseed,",
+            "I hope my previous emails have shown you what Sprout can do for your job search.",
+            "We built this to take the busywork out of applying, so you can focus on landing interviews.",
+            "I noticed you haven't started yet. No worries if you've been busy - I get it.",
+            "Just in case, I extended your 15% discount for another 48 hours.",
+            "Use code EMAMAR15 in the app to claim.",
+            "CLAIM MY DISCOUNT >>",
+            "Rooting for you,",
+            "Eric from Sprout",
+            "P.S. If you have any questions, just reply to this email. Our team will get back to you ASAP."
+        ],
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "You've Won a Free iPhone 16!!!",
+        "body": "CONGRATULATIONS!!! You have been selected as our lucky winner. Click here within 24 hours to claim your prize before it expires. Limited spots available!",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "Your $500 Amazon Gift Card is Waiting",
+        "body": "Hi, we noticed you haven't claimed your reward yet. Complete a short survey to receive your $500 gift card instantly. Offer expires soon!",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "URGENT: Verify Your D2L Account Now",
+        "body": "Your account will be suspended in 24 hours unless you verify your login credentials. Click the link below and enter your S# and password to avoid losing access.",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "Make $5000/week from home - no experience needed",
+        "body": "Tired of student loans? Join thousands of students already earning full-time income working just a few hours a week from their laptop. DM me to get started today.",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "Your package could not be delivered",
+        "body": "We attempted to deliver your package but were unable to reach you. Please confirm your address and pay a small redelivery fee to reschedule.",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "90% off all textbooks this week only!!!",
+        "body": "Huge clearance sale on textbooks, calculators, and dorm supplies. Use code SAVE90 at checkout. Sale ends midnight tonight, don't miss out!",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "RE: RE: FWD: FWD: you have to see this",
+        "body": "lol check this out, my cousin sent it to me, click the link its hilarious",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "Exclusive investment opportunity for students",
+        "body": "Turn $100 into $10,000 in just 30 days with our proven crypto trading strategy. Spots are limited, act now before this opportunity closes.",
+        "expected_category": "irrelevant"
+    },
+    {
+        "subject": "Which edition of the textbook do I need?",
+        "body": "Hi Professor Taylor-Westwood, I'm about to order the textbook and wanted to double check which edition I need before I buy the wrong one. Thanks!",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Office hours this week",
+        "body": "Hi, what day and time are your office hours? I have a couple of questions about the reading and wanted to catch you live instead of emailing back and forth.",
+        "expected_category": "student"
+    },
+    {
+        "subject": "How is my grade calculated?",
+        "body": "Hi, I'm trying to figure out how much each assignment category is worth toward my final grade so I can plan out the rest of the semester. Could you point me to the breakdown?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "grading scale question",
+        "body": "hey what percentage do i need to get a B in this class? just want to know where i stand",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Last day to drop the course",
+        "body": "I'm considering dropping this class and want to make sure it doesn't show up on my transcript. What's the last day I can do that?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Withdraw deadline",
+        "body": "If I withdraw from this course, when's the last day I can do that and still get a W instead of a grade?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Late discussion posts",
+        "body": "If I post my discussion response a day late this week, will I still get credit for it?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "How much time should this class take per week?",
+        "body": "Just trying to plan my schedule for the semester - roughly how many hours a week should I expect to spend on this course?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Extra credit availability",
+        "body": "Is there any extra credit offered in this class? I want to boost my grade a bit if possible.",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Browser issues with D2L",
+        "body": "I keep having trouble loading videos in D2L on my Chromebook. Is there a specific browser or device I'm supposed to be using for this class?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "How does attendance work in an online class?",
+        "body": "I'm confused how you can even take attendance in an online asynchronous class. How does that actually work?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Family emergency - need extension on Composition #2",
+        "body": "Hi Professor, my grandmother was hospitalized this week and I've had to travel out of state to help my family. I'm not going to be able to finish Composition #2 by the deadline. Is there any way I could get a short extension?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Requesting disability accommodation",
+        "body": "Hi, I have an accommodation letter from the disability resource office for extended time on assignments. Can we set up a time to talk through how that applies to this class?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Discussion board grade seems wrong",
+        "body": "I just checked my grades and my Week 5 discussion post is showing a much lower score than I expected given the feedback you left. Could you take another look at it?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Missing this week due to a medical procedure",
+        "body": "I have a minor surgery scheduled this Thursday and won't be able to log in or complete assignments for a few days. Will this affect my attendance record, and what should I do?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Switching composition groups",
+        "body": "I'm having some serious conflicts with my group for the Narrative Genre composition - two of them haven't responded to any messages in over a week. Is it possible for me to switch groups or work independently?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "D2L crashed before I could submit Research Proposal",
+        "body": "I had my Research Proposal finished and ready to upload, but D2L kept giving me an error message right at the deadline. I have screenshots of the issue. Can I still get credit for submitting it on time?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Formally disputing my final grade",
+        "body": "I want to formally dispute the final grade I received in this course. I believe there was a miscalculation somewhere and I'd like to go through the appropriate process to have it reviewed.",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Personal situation - may need to withdraw late",
+        "body": "I'm dealing with a difficult personal situation at home and I'm not sure I'll be able to finish the semester. The withdraw deadline may have already passed by the time I know for sure. What are my options at this point?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Extension request for Multigenre Project",
+        "body": "My work schedule got changed last minute and I'm going to have a really hard time finishing the Multigenre Project by the due date. Would it be possible to get a few extra days?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Attendance record looks wrong",
+        "body": "I noticed I was marked absent for last week, but I definitely submitted two discussion posts during that time. Could you double check my attendance record and correct it if there's an error?",
+        "expected_category": "student"
+    },
+    {
+        "subject": "Asking about an incomplete grade",
+        "body": "Given everything going on this semester, I don't think I'm going to be able to finish all the coursework in time. Is it possible to request an incomplete instead of a final grade, and how would that work?",
+        "expected_category": "student"
+    }
+]
